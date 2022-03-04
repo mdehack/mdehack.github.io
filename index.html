@@ -23,6 +23,9 @@ h2{
   display: inline-block !important;
   line-height: 1;
   transform-origin: bottom;
+  position:absolute;
+  left:186px;
+  top:72px;
 }
 </style>
 	
@@ -65,7 +68,7 @@ window.addEventListener('click', function() {
       var rang = Math.floor( i / totalEls * frequencyData.length ) ; // find equal distance in haystack
       var FREQ = frequencyData[ rang ] / 255; 
       // set minimal opacity to 20%
-      allRepeatedEls[i].style.opacity = FREQ +.5; 
+      allRepeatedEls[i].style.opacity = FREQ +.7; 
       // matrix set Y only [ matrix(X, 0, 0, Y, 0, 0) ]
       allRepeatedEls[i].style.transform = "matrix(1, 0, 0, "+ (FREQ * 2 + 1) +", 0, 0)";
       // set color to:
