@@ -26,40 +26,42 @@ h2{
 .data-splitting{ 
   border: 1px solid red !important;
 }
+
+.module {
+  background: 
+    linear-gradient(
+      rgba(0, 0, 0, 0.6),
+      rgba(0, 0, 0, 0.6)
+    ),
+    url(img/mdecrack_green.png);
+  background-size: cover;
+  width: 300px;
+  height: 200px;
+  margin: 10px 0 0 10px;
+  position: relative;
+  float: left;
+}
+
+.top span {
+  color: gray;
+  margin: 0;
+  padding: 20px;
+  top:50px;
+}
 </style>
 	
     <title>mic test</title>
   </head>
   <body>
-<h2><div data-splitting><img id="imagen_mde" src="img/mdecrack_green.png" alt="Be patient..." /><b>-----------</b></div></h2>
+	<div class="module top">
+	  <h2><div data-splitting><b>-</b></div></h2>
+	</div>
+
 
 <script type="text/javascript" src="https://unpkg.com/splitting/dist/splitting.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script>
 
-        // onload document window using jquery
-$().ready(function(){
-  var i = 0;
-  
-//   Background Images
-  var images = [
-    'https://mdehack.github.io/img/mdecrack_green.png',
-    'https://mdehack.github.io/img/mdecrack_green_2.png'
-  ]
-  
-//   pick body element ID
-  var image = $('#imagen_mde')
-  
-//   change image every after 5 seconds
-  setInterval(function(){
-    image.fadeOut(0, function(){
-      image.css('background-image', 'url(' + images [i++] +')')
-      image.fadeIn(0)
-    })
-    if(1 == images.length)
-      i = 0
-  }, 3000)
-})   
 </script>
 <script>
 // split text
